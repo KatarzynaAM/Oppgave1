@@ -1,0 +1,59 @@
+body {
+    margin-left: 10px;
+}
+
+.card {
+    width: 500px;
+    background-color: rgb(80, 143, 55);
+    border: 1px solid darkgray;
+    margin: 10px;
+}
+
+.innercard {
+    padding: 10px;
+
+}
+
+
+.header {
+    color: rgb(104, 101, 42);
+    text-align: center;
+    font-size: x-large;
+    padding: 1%;
+    border: 1px solid gray;
+    user-select: none;
+
+}
+
+.green {
+    background-color: rgb(168, 165, 165);
+}
+
+.blue {
+    background-color: rgb(110, 110, 110);
+}
+
+.red {
+    background-color: rgb(63, 63, 63);
+}
+
+.yellow {
+    background-color: rgb(36, 36, 36);
+}
+
+.dark {
+    background-color: rgb(0, 0, 0);
+}
+
+.innercard2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guzik1{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0%;
+}
