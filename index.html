@@ -5,24 +5,174 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zadanko11</title>
+    <title>oppgave1</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        .layout1 {
+        /*empty, no layout*/
+        }
+
+        .layout2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .layout3 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .layout4 {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    </style>
 </head>
 
 <body>
-    <button>Ingen layout</button>
-    <button>Vertical layout</button>
-    <button>Horizontal layout</button>
-    <button>Grid layout</button>
+    <button onclick="layout1()">Ingen layout</button>
+    <button onclick="layout2()">Vertical layout</button>
+    <button onclick="layout3()">Horizontal layout</button>
+    <button onclick="layout4()">Grid layout</button>
 
     <h1>
         <marquee>Eksempel 1</marquee>
     </h1>
 
-    <div class="card">
-        <div class="header green">Verktøy</div>
-        <div class="innercard">
-            De to viktigste verktøyene vi skal bruke er disse:
+   
+    <div id="ustawka">
+        <div class="card">
+            <div class="header green" onclick="hed1()">Verktøy</div>
+            <div class="innercard" id="dupa1"></div>
+        </div>
+
+        <div class="card">
+            <div class="header blue" onclick="hed2()">HTML</div>
+            <div class="innercard" id="dupa2">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="header red" onclick="hed3()">CSS</div>
+            <div class="innercard" id="dupa3">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="header yellow" onclick="hed4()">JavaScript</div>
+            <div class="innercard" id="dupa4"></div>
+        </div>
+
+        <div class="card">
+            <div class="header dark" onclick="hed5()">Hode, kropp og ben</div>
+            <div class="innercard2" id="dupa5">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        function zmiana1(){
+            document.getElementById('nacisk1').innerHTML = /*HTML*/
+            `<button onclick="zmiana4()">◀</button>
+                <img src="image/head1.png">
+                <button onclick="zmiana2()">▶</button>`;
+        }
+        function zmiana2(){
+            document.getElementById('nacisk1').innerHTML = /*HTML*/
+            `<button onclick="zmiana1()">◀</button>
+                <img src="image/head2.png">
+                <button onclick="zmiana3()">▶</button>`;
+        }
+        function zmiana3(){
+            document.getElementById('nacisk1').innerHTML = /*HTML*/
+            `<button onclick="zmiana2()">◀</button>
+                <img src="image/head3.png">
+                <button onclick="zmiana4()">▶</button>`;
+        }
+        function zmiana4(){
+            document.getElementById('nacisk1').innerHTML = /*HTML*/
+            `<button onclick="zmiana3()">◀</button>
+                <img src="image/head4.png">
+                <button onclick="zmiana1()">▶</button>`;
+        }
+
+        function zamiana1(){
+            document.getElementById('dociski1').innerHTML = /*HTML*/ 
+            `<button onclick="zamiana4()">◀</button>
+                <img src="image/body1.png">
+                <button onclick="zamiana2()">▶</button>`;
+        }
+        function zamiana2(){
+            document.getElementById('dociski1').innerHTML = /*HTML*/ 
+            `<button onclick="zamiana1()">◀</button>
+                <img src="image/body2.png">
+                <button onclick="zamiana3()">▶</button>`;
+        }
+        function zamiana3(){
+            document.getElementById('dociski1').innerHTML = /*HTML*/ 
+            `<button onclick="zamiana2()">◀</button>
+                <img src="image/body3.png">
+                <button onclick="zamiana4()">▶</button>`;
+        }
+        function zamiana4(){
+            document.getElementById('dociski1').innerHTML = /*HTML*/ 
+            `<button onclick="zamiana3()">◀</button>
+                <img src="image/body4.png">
+                <button onclick="zamiana1()">▶</button>`;
+        }
+
+        function wymiana1(){
+            document.getElementById('odciski1').innerHTML = /*HTML*/
+            `<button onclick="wymiana4()">◀</button>
+                <img src="image/legs1.png">
+                <button onclick="wymiana2()">▶</button>`;
+        }
+        function wymiana2(){
+            document.getElementById('odciski1').innerHTML = /*HTML*/
+            `<button onclick="wymiana1()">◀</button>
+                <img src="image/legs2.png">
+                <button onclick="wymiana3()">▶</button>`;
+        }
+        function wymiana3(){
+            document.getElementById('odciski1').innerHTML = /*HTML*/
+            `<button onclick="wymiana2()">◀</button>
+                <img src="image/legs3.png">
+                <button onclick="wymiana4()">▶</button>`;
+        }
+        function wymiana4(){
+            document.getElementById('odciski1').innerHTML = /*HTML*/
+            `<button onclick="wymiana3()">◀</button>
+                <img src="image/legs4.png">
+                <button onclick="wymiana1()">▶</button>`;
+        }
+        
+
+        function layout1() {
+            document.getElementById('ustawka').classList = [];    
+            document.getElementById('ustawka').classList.add('layout1');
+        }
+
+        function layout2() {
+            document.getElementById('ustawka').classList = [];
+            document.getElementById('ustawka').classList.add('layout2');
+        }
+
+        function layout3() {
+            document.getElementById('ustawka').classList = [];
+            document.getElementById('ustawka').classList.add('layout3');
+        }
+
+        function layout4() {
+            document.getElementById('ustawka').classList = [];
+            document.getElementById('ustawka').classList.add('layout4');
+        }
+
+        function hed1() {
+            przeczyszczenie();
+            document.getElementById('dupa1').innerHTML = /*HTML*/
+                `De to viktigste verktøyene vi skal bruke er disse:
             <ul>
                 <li>
                     Koderedigeringsprogrammet <a href="https://code.visualstudio.com/">
@@ -37,15 +187,13 @@
                     </ul>
                 </li>
                 <li> Nettleseren <a href="https://www.google.com/intl/no/chrome/">Google Chrome</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="header blue">HTML</div>
-        <div class="innercard">
-            Vi bruker HTML til å definere et dokument.
-            <ul>
+            </ul>`;
+        }
+        function hed2() {
+            przeczyszczenie();
+            document.getElementById('dupa2').innerHTML = /*HTML*/
+                `Vi bruker HTML til å definere et dokument.
+            <ul >
                 <li>Tagger for grunnleggende oppsett av en HTML-fil</li>
                 <li>Tagger for grunnleggende formatering av tekst</li>
                 <li><tt>&lt;div&gt;</tt></li>
@@ -55,15 +203,14 @@
                 </li>
                 <li><a href="https://www.w3schools.com/tags/default.asp" target="_new">W3Schools HTML Reference</a>
                 </li>
-            </ul>
-        </div>
-    </div>
+            </ul >`;
 
-    <div class="card">
-        <div class="header red">CSS</div>
-        <div class="innercard">
-            Vi bruker CSS til å <i>style</i> et dokument, altså farger, fonter, utseende og lignende.
-            <ul>
+        }
+        function hed3() {
+            przeczyszczenie();
+            document.getElementById('dupa3').innerHTML = /*HTML*/
+                `Vi bruker CSS til å < i > style </i > et dokument, altså farger, fonter, utseende og lignende.
+            <ul >
                 <li><tt>background-color</tt></li>
                 <li><tt>color</tt></li>
                 <li><tt>padding</tt></li>
@@ -77,46 +224,52 @@
                 </li>
                 <li><a href="https://www.w3schools.com/cssref/default.asp" target="_new">W3Schools CSS Reference</a>
                 </li>
-            </ul>
-        </div>
-    </div>
+            </ul >`;
 
-    <div class="card">
-        <div class="header yellow">JavaScript</div>
-        <div class="innercard">
-            Det viktigste vi skal lære er programmeringsspråket JavaScript. Vi skal lære grunnleggende programmering
-            ved
-            å manipulere HTML- og CSS-kode på en nettside ved hjelp av JavaScript.
-            <ul>
-                <li>Det finnes en W3Schools JavaScript Tutorial, men her anbefaler vi heller å følge kurset vårt på
-                    Moodle.</li>
-                <li><a href="https://www.w3schools.com/jsref/default.asp" target="_new">W3Schools JavaScript
-                        Reference</a></li>
+        }
+        function hed4() {
+            przeczyszczenie();
+            document.getElementById('dupa4').innerHTML = /*HTML*/
+                `Det viktigste vi skal lære er programmeringsspråket JavaScript. Vi skal lære grunnleggende programmering
+                    ved
+                    å manipulere HTML- og CSS-kode på en nettside ved hjelp av JavaScript.
+                    <ul>
+                        <li>Det finnes en W3Schools JavaScript Tutorial, men her anbefaler vi heller å følge kurset vårt på
+                            Moodle.</li>
+                        <li><a href="https://www.w3schools.com/jsref/default.asp" target="_new">W3Schools JavaScript
+                            Reference
+                        </a>
+                        </li>
 
-            </ul>
-        </div>
-    </div>
+                    </ul>`;
 
-    <div class="card">
-        <div class="header dark">Hode, kropp og ben</div>
-        <div class="innercard2">
-            <div class="guzik1">
-                <button>◀</button>
-                <img src="image/head1.png">
-                <button>▶</button>
+        }
+        function hed5() {
+            przeczyszczenie();
+            document.getElementById('dupa5').innerHTML = /*HTML*/
+            `<div class="guzik1" id="nacisk1">
+
             </div>
-            <div class="guzik1">
-                <button>◀</button>
-                <img src="image/body1.png">
-                <button>▶</button>
+
+            <div class="guzik1" id="dociski1">
+
             </div>
-            <div class="guzik1">
-                <button>◀</button>
-                <img src="image/legs1.png">
-                <button>▶</button>
-            </div>
-        </div>
-    </div>
+
+            <div class="guzik1" id="odciski1">
+
+            </div>`;
+            zmiana1(), zamiana1(), wymiana1();
+        }
+        function przeczyszczenie() {
+            document.getElementById('dupa1').innerHTML = '';
+            document.getElementById('dupa2').innerHTML = '';
+            document.getElementById('dupa3').innerHTML = '';
+            document.getElementById('dupa4').innerHTML = '';
+            document.getElementById('dupa5').innerHTML = '';
+        }
+
+       
+    </script>
 
 </body>
 
